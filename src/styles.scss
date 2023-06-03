@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .navbar-active .hamburger div:first-child {
+    @apply rotate-45 translate-y-1.5;
+    }
+    .navbar-active .hamburger div:last-child {
+    @apply -rotate-45 -translate-y-1;
+    }
+    .navbar-active div:first-child div:first-child div:last-child{
+        @apply block lg:flex
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    background: #f4f7fa;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: #fff;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+    color: #495057;
+
+    .card-head {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #edf1f7;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .card-body {
+        padding: 1rem 1.5rem; 
+    }
+}
