@@ -9,11 +9,11 @@ export const navbarData = [
         icon: 'bi bi-calendar-date',
         label: 'Agenda',
     },
-    /* {
-        routerLink: 'students/show',
-        icon: 'bi bi-people',
-        label: 'Horario',
-    }, */
+    {
+        routerLink: 'asignaciones/show',
+        icon: 'bi bi-calendar-event',
+        label: 'Asignacion',
+    },
     {
         routerLink: 'qualifications/show',
         icon: 'bi bi-book',

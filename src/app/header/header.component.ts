@@ -38,12 +38,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.checkCanShowSearchAsOverlay(window.innerWidth);
     //obtener datos del usuario
-    this.afAuth.authState.subscribe(user => {
+    /* this.afAuth.authState.subscribe(user => {
       //almacenar datos del usuario para visualizar en el header
         this.user.displayName = user?.displayName!;
         this.user.email = user?.email!;
         this.user.photoURL = user?.photoURL!;
-    })
+    }) */
   }
 
   getHeadClass(): string {
