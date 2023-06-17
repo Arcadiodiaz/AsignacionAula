@@ -3,25 +3,30 @@ export const navbarData = [
         routerLink: './',
         icon: 'bi bi-speedometer2',
         label: 'Dashboard',
+        rol: 'Administrativo',
     },
     {
-        routerLink: 'calendar',
-        icon: 'bi bi-calendar-date',
-        label: 'Agenda',
+        routerLink: 'user',
+        icon: 'bi bi-people',
+        label: 'Usuarios',
+        rol: 'Administrativo',
     },
     {
-        routerLink: 'asignaciones/show',
-        icon: 'bi bi-calendar-event',
+        routerLink: 'assignments/show',
+        icon: 'bi bi-clipboard-check',
         label: 'Asignacion',
+        rol: 'Administrativo',
     },
     {
-        routerLink: 'qualifications/show',
+        routerLink: 'aulas/show',
         icon: 'bi bi-book',
         label: 'Aulas',
+        rol: 'Administrativo',
     },
     {
         routerLink: 'settings',
         icon: 'bi bi-gear',
         label: 'Configuración',
+        rol: 'Administrativo',
     }
 ];

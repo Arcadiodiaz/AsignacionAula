@@ -1,22 +1,31 @@
-<a routerLink="/dashboard/qualifications/create"
+<a routerLink="/dashboard/assignments/create"
     class="px-3 py-2 rounded bg-green-600 hover:bg-green-700 text-white border-gray-700">Crear</a>
 
 <div class="card">
-    <div class="card-head">Calificaciones</div>
+    <div class="card-head">Asignaciones</div>
     <div class="card-body">
         <div class="w-full mx-auto bg-white">
             <div class="overflow-x-auto">
                 <table class="table-auto w-full">
                     <thead class="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
                         <tr>
-                            <th class="p-2 whitespace-nowrap">
-                                <div class="font-semibold text-left">Estudiante</div>
+                            <th class="p-2 whitespace-nowrap w-auto">
+                                <div class="font-semibold text-left">Usuario</div>
                             </th>
                             <th class="p-2 whitespace-nowrap">
-                                <div class="font-semibold text-left">Asignatura</div>
+                                <div class="font-semibold text-left">Aula</div>
                             </th>
                             <th class="p-2 whitespace-nowrap">
-                                <div class="font-semibold text-left">Nota</div>
+                                <div class="font-semibold text-left">Bloque</div>
+                            </th>
+                            <th class="p-2 whitespace-nowrap">
+                                <div class="font-semibold text-left">Fecha</div>
+                            </th>
+                            <th class="p-2 whitespace-nowrap">
+                                <div class="font-semibold text-left">Hora Inicio</div>
+                            </th>
+                            <th class="p-2 whitespace-nowrap">
+                                <div class="font-semibold text-left">Hora Fin</div>
                             </th>
                             <th class="p-2 whitespace-nowrap">
                                 <div class="font-semibold text-center">Acciones</div>
@@ -24,25 +33,36 @@
                         </tr>
                     </thead>
                     <tbody class="text-sm divide-y divide-gray-100">
-                        <tr *ngFor="let post of Posts">
+                        <tr *ngFor="let asi of assignments; let i = index"
+                        [class.active]="i == currentIndex"
+                        (click)="setActiveAssignment(asi, i)">
                             <td class="p-2 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <!-- <div class="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3"><img class="rounded-full"
                                             src="https://raw.githubusercontent.com/cruip/vuejs-admin-dashboard-template/main/src/images/user-36-05.jpg"
                                             width="40" height="40" alt="Alex Shatov"></div> -->
-                                    <div class="font-medium text-gray-800">{{post.Estudiante}}</div>
+                                    <div class="font-medium text-gray-800">{{asi.usuarios.nombre_completo}}</div>
                                 </div>
                             </td>
                             <td class="p-2 whitespace-nowrap">
-                                <div class="text-left">{{post.Asignatura}}</div>
+                                <div class="text-left">{{asi.aulas.nombre}}</div>
                             </td>
                             <td class="p-2 whitespace-nowrap">
-                                <div class="text-left font-medium text-green-500">{{post.Nota}}</div>
+                                <div class="text-left">{{asi.aulas.bloque}}</div>
+                            </td>
+                            <td class="p-2 whitespace-nowrap">
+                                <div class="text-left font-medium text-green-500">{{asi.fecha}}</div>
+                            </td>
+                            <td class="p-2 whitespace-nowrap">
+                                <div class="text-left">{{asi.hora_inicio}}</div>
+                            </td>
+                            <td class="p-2 whitespace-nowrap">
+                                <div class="text-left">{{asi.hora_fin}}</div>
                             </td>
                             <td class="p-2 whitespace-nowrap">
                                 <div class="text-lg text-center">
                                     <button
-                                        routerLink="/dashboard/qualifications/edit/{{post.id}}"
+                                        routerLink="/dashboard/assignments/edit/{{asi.id_asignacion}}"
                                         class="py-2 px-3 rounded-l bg-blue-500 hover:bg-blue-600 text-white border-blue-800">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -52,7 +72,7 @@
                                         </svg>
                                     </button>
                                     <button
-                                    (click)="deleteRow(post)"
+                                    (click)="deleteAssignment(asi.id_asignacion)"
                                         class="py-2 px-3 rounded-r bg-red-500 hover:bg-red-600 text-white border-red-700 -ml-1">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

@@ -24,9 +24,6 @@ import { provideAuth, getAuth} from '@angular/fire/auth';
 
 //importar configuracion de firebase
 import { environment } from 'src/environments/environment';
-import { ShowComponent } from './qualifications/show/show.component';
-import { CreateComponent } from './qualifications/create/create.component';
-import { EditComponent } from './qualifications/edit/edit.component';
 import { HomeComponent } from './landingPage/home/home.component';
 import { LoginComponent } from './landingPage/login/login.component';
 import { FooterComponent } from './landingPage/footer/footer.component';
@@ -38,9 +35,13 @@ import { EditStudentComponent } from './students/edit-student/edit-student.compo
 import { ShowStudentComponent } from './students/show-student/show-student.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { ShowAsignacionComponent } from './asignaciones/show-asignacion/show-asignacion.component';
-import { CreateAsignacionComponent } from './asignaciones/create-asignacion/create-asignacion.component';
-import { EditAsignacionComponent } from './asignaciones/edit-asignacion/edit-asignacion.component';
+import { ShowAssignmentComponent } from './assignment/show-assignment/show-assignment.component';
+import { EditAssignmentComponent } from './assignment/edit-assignment/edit-assignment.component';
+import { CreateAssignmentComponent } from './assignment/create-assignment/create-assignment.component';
+import { ShowLoginComponent } from './landingPage/login/show-login/show-login.component';
+import { ClassroomShowComponent } from './classroom/classroom-show/classroom-show.component';
+import { ClassroomCreateComponent } from './classroom/classroom-create/classroom-create.component';
+import { ClassroomEditComponent } from './classroom/classroom-edit/classroom-edit.component';
 
 @NgModule({
   declarations: [
@@ -51,9 +52,6 @@ import { EditAsignacionComponent } from './asignaciones/edit-asignacion/edit-asi
     CalendarComponent,
     SettingsComponent,
     HeaderComponent,
-    ShowComponent,
-    CreateComponent,
-    EditComponent,
     HomeComponent,
     LoginComponent,
     FooterComponent,
@@ -63,9 +61,13 @@ import { EditAsignacionComponent } from './asignaciones/edit-asignacion/edit-asi
     CreateStudentComponent,
     EditStudentComponent,
     ShowStudentComponent,
-    ShowAsignacionComponent,
-    CreateAsignacionComponent,
-    EditAsignacionComponent
+    ShowAssignmentComponent,
+    EditAssignmentComponent,
+    CreateAssignmentComponent,
+    ShowLoginComponent,
+    ClassroomShowComponent,
+    ClassroomCreateComponent,
+    ClassroomEditComponent
   ],
   imports: [
     BrowserModule,

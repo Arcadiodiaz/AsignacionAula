@@ -1,5 +1,5 @@
-export class Asignacion {
-    id?: any;
+export class Assignment {
+    id_asignacion?: any;
     fecha?: string;
     hora_inicio?: string;
     hora_fin?: string;
@@ -7,17 +7,16 @@ export class Asignacion {
     usuario?: string;
     usuarios?: {
         id_usuario: number;
-        nombre: string;
-        apellido: string;
+        nombre_completo: string;
         correo: string;
         rol: number;
     };
     aulas?: {
         id_aula: number;
-        nombre: string;
+        nombre: number;
         capacidad: number;
         tipo: string;
         estado: string;
-        bloque: string;
+        bloque: number;
     };
 }

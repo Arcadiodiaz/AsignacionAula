@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Asignacion } from '../models/asignacion.model';
-
 /* const baseUrl = 'http://localhost:8000/core/api/asignaciones/'; */
 
 @Injectable({
@@ -14,7 +12,7 @@ export class AsignacionService {
 
   constructor( private http: HttpClient) { }
 
-  crearAsignacion(asignacion: Asignacion): Observable<Asignacion> {
+  /* crearAsignacion(asignacion: Asignacion): Observable<Asignacion> {
     return this.http.post<Asignacion>(`${this.url}/core/api/asignaciones/`, asignacion);
   }
 
@@ -24,7 +22,7 @@ export class AsignacionService {
 
   deleteAsignacion(id: any): Observable<Asignacion> {
     return this.http.delete<Asignacion>(`${this.url}/core/api/asignaciones/${id}/`);
-  }
+  } */
 
  /*  getAsignacion(): Observable<Asignacion[]> {
     return this.http.get<Asignacion[]>(baseUrl);
